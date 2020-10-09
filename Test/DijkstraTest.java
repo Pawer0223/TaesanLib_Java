@@ -21,7 +21,15 @@ public class DijkstraTest {
 
 		int[] minDistance = caller.dijkstra(n, edges, startV, inf);
 		System.out.println("### dijkstra Result .. ###");
-		System.out.println(Arrays.toString(minDistance));
+		System.out.println("expact : [0, 0, 1, 3, 2 ,2, 2]" + " ==> result : " + Arrays.toString(minDistance));
+		
+		minDistance = caller.dijkstra(n, edges, 4, inf);
+		System.out.println("### dijkstra Result .. ###");
+		System.out.println("expact : [0, 2, 1, 1, 0 ,2, 2]" + " ==> result : " + Arrays.toString(minDistance));
+		
+		minDistance = caller.dijkstra(n, edges, 5, inf);
+		System.out.println("### dijkstra Result .. ###");
+		System.out.println("expact : [0, 2, 1, 2, 2 ,0, 3]" + " ==> result : " + Arrays.toString(minDistance));
 		
 	}
 
