@@ -3,12 +3,7 @@ package Functions;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * arr배열에서 n개를 선택하여 만들 수 있는 순열을 찾아 return한다.
- *  순열 : 순서가 있다.
- *  [1, 2]와 [2, 1]은 다르게 취급된다. 
- */
-public class Permutation<T> {
+public class Combination<T> {
 	
 	/*
 	 * result: 결과
@@ -27,14 +22,18 @@ public class Permutation<T> {
 		
 		visitPosition = new boolean[arr.length];
 		perResult = new int[amount];
-		setPermutation(arr, amount, 0);
+		setCombination(arr, amount, 0, 0);
 
 		return result;
 	}
-
-	private void setPermutation(T[] arr, int amount, int cnt) {
-
-		if (cnt == amount) {
+	
+	/*
+	 * start: 중복을 피하기 위해서, 다음 데이터의 시작위치를 한칸씩 증가시키며 이동한다.
+	 */
+	void setCombination(T[] arr, int amount, int idx, int start) {
+		
+		if (idx == amount) {
+			
 			List<T> addPer = new ArrayList<>();
 			for (int p : perResult) {
 				addPer.add(arr[p]);
@@ -42,14 +41,16 @@ public class Permutation<T> {
 			result.add(addPer);
 			return ;
 		}
-
-		for (int i = 0; i < arr.length; i++) {
-			if (visitPosition[i])
-				continue;
-			visitPosition[i] = true;
-			perResult[cnt] = i;
-			setPermutation(arr, amount, cnt + 1);
+		
+		// 1 ~ N 까지의 숫자
+		for (int i = start; i < arr.length; i++) {
+			if (!visitPosition[i]) {
+			visitPosition[i] = true; // 방문
+			perResult[idx] = i;
+			setCombination(arr, amount, idx + 1 , i + 1); // i + 1이나 i나 결과는 같다.
 			visitPosition[i] = false;
+			}
 		}
 	}
+	
 }
