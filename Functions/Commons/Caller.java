@@ -5,6 +5,7 @@ import java.util.List;
 import Functions.Combination;
 import Functions.Permutation;
 import Functions.PowerSet;
+import Functions.Graph.Dijkstra;
 
 public class Caller {
 	
@@ -21,6 +22,12 @@ public class Caller {
 	public <T> List<List<T>> powerSet(T[] arr, boolean isDesc) {
 		PowerSet<T> c = new PowerSet<>();
 		return c.start(arr, isDesc);
-	} 
+	}
+	
+	public int[] dijkstra(int n, int[][] edges, int startV, int inf) {
+		Dijkstra dijk = new Dijkstra();
+		return dijk.start(n, edges, startV, inf);
+	}
+
 
 }
