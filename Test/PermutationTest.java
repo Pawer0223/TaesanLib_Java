@@ -2,8 +2,8 @@ package Test;
 
 import java.util.List;
 
-import Functions.Caller;
-import Functions.PrintData;
+import Functions.Commons.Caller;
+import Functions.Commons.PrintData;
 
 public class PermutationTest {
 	
@@ -21,13 +21,13 @@ public class PermutationTest {
 		String[] arr3 = {"red" , "blue" , "black"};
 		int n3 = 3;
 		
-		List<List<Integer>> permutation = caller.permutation2(arr1, n);
+		List<List<Integer>> permutation = caller.permutation(arr1, n);
 		print.twoList(permutation);
 
-		List<List<Character>> permutation2 = caller.permutation2(arr2, n2);
+		List<List<Character>> permutation2 = caller.permutation(arr2, n2);
 		print.twoList(permutation2);
 
-		List<List<String>> permutation3 = caller.permutation2(arr3, n3);
+		List<List<String>> permutation3 = caller.permutation(arr3, n3);
 		print.twoList(permutation3);
 		
 	}

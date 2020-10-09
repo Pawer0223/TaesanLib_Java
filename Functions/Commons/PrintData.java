@@ -1,4 +1,4 @@
-package Functions;
+package Functions.Commons;
 
 import java.util.Arrays;
 import java.util.List;
