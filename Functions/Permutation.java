@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
+ * 순열 알고리즘
  * arr배열에서 n개를 선택하여 만들 수 있는 순열을 찾아 return한다.
- *  순열 : 순서가 있다.
+ *  순열 : 순서에 의미가 있다.
  *  [1, 2]와 [2, 1]은 다르게 취급된다. 
  */
 public class Permutation<T> {

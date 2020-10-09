@@ -2,7 +2,12 @@ package Functions;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*
+ * 조합 알고리즘
+ * arr에서 amount개를 선택하여 나올 수 있는 조합을 구한다.
+ *  조합 : 순서에 의미가 없다.
+ *  [1, 2]나 [2, 1]은 같다.
+ */
 public class Combination<T> {
 	
 	/*
