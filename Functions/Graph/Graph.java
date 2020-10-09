@@ -51,4 +51,30 @@ public class Graph {
 		}
 		return adjList;
 	}
+	
+	/*
+	 * 부모 노드의 정보를 찾는다.
+	 */
+	public int getParent(int[] parents, int v) {
+		if (parents[v] == v)
+			return v;
+		return getParent(parents, parents[v]);
+	}
+
+	/*
+	 *  두 정점의 부모를 동일하게 적용한다
+	 */
+	public void union(int[] parents, int big, int small) {
+		
+		big = getParent(parents, big);
+		small = getParent(parents, small);
+		
+		// 부모노드의 기준이 필요하다. 더 작은 숫자의 정점이 부모이다.라는 기준으로 합치겠다.
+		if (small > big) {
+			int temp = small;
+			small = big;
+			big = temp;
+		}
+		parents[big] = small; // big의 부모는 small이다. 
+	}
 }

@@ -11,10 +11,10 @@ public class Dijkstra {
 
 	Graph g = new Graph();
 	
-	static int INF = 30000;
-	int[][] graph;
-	int[] minDistance;
-	boolean[] visits;
+	private int INF = 30000;
+	private int[][] graph;
+	private int[] minDistance;
+	private boolean[] visits;
 	/*
 	 * 다익스트라 알고리즘
 	 * startV에서 모든 정점에 도달할 수 있는 최단거리 구하기.

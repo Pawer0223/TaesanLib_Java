@@ -6,6 +6,7 @@ import Functions.Combination;
 import Functions.Permutation;
 import Functions.PowerSet;
 import Functions.Graph.Dijkstra;
+import Functions.Graph.Kruskal;
 
 public class Caller {
 	
@@ -27,6 +28,11 @@ public class Caller {
 	public int[] dijkstra(int n, int[][] edges, int startV, int inf) {
 		Dijkstra dijk = new Dijkstra();
 		return dijk.start(n, edges, startV, inf);
+	}
+	
+	public int kruskal(int n, int[][] edges) {
+		Kruskal krus = new Kruskal();
+		return krus.start(n, edges); 
 	}
 
 
