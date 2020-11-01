@@ -10,12 +10,10 @@ import Functions.Commons.PrintData;
 
 public class Dijkstra {
 
-	GraphCommon g = new GraphCommon();
-	
-	private int INF = 30000;
-	private int[][] graph;
-	private int[] minDistance;
-	private boolean[] visits;
+	private int INF = 30000; // Integer.MAX로하면 overflow날 수 있으니 정확히 측정하자. i -> j로가는 초기 최소값은 MAX로 두어서 갱신되도록한다.
+	private int[][] graph; // graph를 나타내는 인접행렬이다. i -> j로가는 간선이 존재하지 않는다면 0이다.
+	private int[] minDistance; // 시작정점에서 -> idx로 가는데 걸리는 최단거리를 기록한다.
+	private boolean[] visits; // 해당 정점을 방문했는지 확인한다. 인접 노드를 방문해가기 때문에, 방문한 경우는 최단거리를 구했다는 의미이다. a -> b로가는 조건을 보게되니깐.
 	/*
 	 * 다익스트라 알고리즘
 	 * startV에서 모든 정점에 도달할 수 있는 최단거리 구하기.
@@ -27,17 +25,17 @@ public class Dijkstra {
 	 */
 	public int[] start(int n, int[][] edges, int startV, int inf) {
 
-		minDistance = new int[n + 1]; // 정점 startV에서 다른정점으로 가는 최단거리를 기록하기위한 배열
+		minDistance = new int[n + 1];
 		visits = new boolean[n + 1];
 		graph = new int[n + 1][n + 1];
-		INF = inf; // Integer.MAX 할 때, 아래 조건에서 overflow나면 올바르게 처리되지 않으니깐 max값설정에 반드시 주의할 것.. 
+		INF = inf; 
 
 		for(int i = 1; i <= n; i++) {
 			minDistance[i]= INF; // 처음에는 INF로 놓고, 해당 정점을 방문하게 될 때마다 최소 값을 갱신한다.
 			Arrays.fill(graph[i],INF);
 		}
 
-		graph = g.makeAdjArr(graph, edges, true); // 양방향 그래프 생성
+		graph = GraphCommon.makeAdjArr(graph, edges, true); // 양방향 그래프 생성
 		dijkstra(startV, n);
 
 		return minDistance;
