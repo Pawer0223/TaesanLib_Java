@@ -2,6 +2,8 @@ package Functions.Graph;
 
 import java.util.Arrays;
 
+import Functions.Commons.GraphCommon;
+
 
 /*
  * 플로이드 와샬 알고리즘
@@ -11,7 +13,7 @@ import java.util.Arrays;
  */
 public class FloydWarshall {
 
-	Graph g = new Graph();
+	GraphCommon g = new GraphCommon();
 	int[][] distance;
 	int INF = 101;
 

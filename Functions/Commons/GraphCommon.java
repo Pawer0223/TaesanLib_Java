@@ -1,8 +1,8 @@
-package Functions.Graph;
+package Functions.Commons;
 
 import java.util.List;
 
-public class Graph {
+public class GraphCommon {
 
 	/*
 	 * adjArr, adjList: edges정보를 기록 후 return 하기위한 배열 및 list
@@ -15,7 +15,7 @@ public class Graph {
 	/*
 	 * 인접 행렬
 	 */
-	public int[][] makeAdjArr(int[][] adjArr, int[][] edges, boolean isBoth) {
+	public static int[][] makeAdjArr(int[][] adjArr, int[][] edges, boolean isBoth) {
 
 		for (int[] edge : edges) {
 
@@ -31,7 +31,7 @@ public class Graph {
 	/*
 	 * 인접 리스트
 	 */
-	public List<Integer>[] makeAdjList(List<Integer>[] adjList, int[][] edges, boolean isBoth) {
+	public static List<Integer>[] makeAdjList(List<Integer>[] adjList, int[][] edges, boolean isBoth) {
 
 		/*
 		 * dijkstra적용할 때, INF초기화해주고 들어와야해서 호출 전에 할당하도록..
@@ -55,7 +55,7 @@ public class Graph {
 	/*
 	 * 부모 노드의 정보를 찾는다.
 	 */
-	public int getParent(int[] parents, int v) {
+	public static int getParent(int[] parents, int v) {
 		if (parents[v] == v)
 			return v;
 		return getParent(parents, parents[v]);
@@ -64,7 +64,7 @@ public class Graph {
 	/*
 	 *  두 정점의 부모를 동일하게 적용한다
 	 */
-	public void union(int[] parents, int big, int small) {
+	public static void union(int[] parents, int big, int small) {
 		
 		big = getParent(parents, big);
 		small = getParent(parents, small);

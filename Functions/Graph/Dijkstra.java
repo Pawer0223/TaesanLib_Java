@@ -5,11 +5,12 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 import Classes.Vertex;
+import Functions.Commons.GraphCommon;
 import Functions.Commons.PrintData;
 
 public class Dijkstra {
 
-	Graph g = new Graph();
+	GraphCommon g = new GraphCommon();
 	
 	private int INF = 30000;
 	private int[][] graph;
