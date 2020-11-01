@@ -45,9 +45,9 @@ public class GraphCommon {
 			int v1 = edge[0];
 			int v2 = edge[1];
 
-			adjList[v1].add(1);
+			adjList[v1].add(v2);
 			if (isBoth)
-				adjList[v2].add(1);
+				adjList[v2].add(v1);
 		}
 		return adjList;
 	}

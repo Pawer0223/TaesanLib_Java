@@ -8,6 +8,7 @@ import Functions.PowerSet;
 import Functions.Graph.Dijkstra;
 import Functions.Graph.FloydWarshall;
 import Functions.Graph.Kruskal;
+import Functions.Graph.LowestCommonAncestor1;
 
 public class Caller {
 	
@@ -40,6 +41,10 @@ public class Caller {
 		FloydWarshall floyd = new FloydWarshall();
 		return floyd.start(n, arr, inf); 
 	}
-
+	
+	public int[] lca1(int n, int root, int[][] connect, int m, int[][] testCase) {
+		LowestCommonAncestor1 lca1 = new LowestCommonAncestor1();
+		return lca1.start(n, root, connect, m, testCase);
+	}
 
 }
