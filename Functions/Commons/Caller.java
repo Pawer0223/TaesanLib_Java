@@ -9,6 +9,7 @@ import Functions.Graph.Dijkstra;
 import Functions.Graph.FloydWarshall;
 import Functions.Graph.Kruskal;
 import Functions.Graph.LowestCommonAncestor1;
+import Functions.Graph.LowestCommonAncestor2;
 
 public class Caller {
 	
@@ -45,6 +46,11 @@ public class Caller {
 	public int[] lca1(int n, int root, int[][] connect, int m, int[][] testCase) {
 		LowestCommonAncestor1 lca1 = new LowestCommonAncestor1();
 		return lca1.start(n, root, connect, m, testCase);
+	}
+	
+	public int[] lca2(int n, int root, int[][] connect, int m, int[][] testCase) {
+		LowestCommonAncestor2 lca2 = new LowestCommonAncestor2();
+		return lca2.start(n, root, connect, m, testCase);
 	}
 
 }
