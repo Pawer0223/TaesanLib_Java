@@ -31,6 +31,20 @@ public class DijkstraTest {
 		System.out.println("### dijkstra Result .. ###");
 		System.out.println("expact : [0, 2, 1, 2, 2 ,0, 3]" + " ==> result : " + Arrays.toString(minDistance));
 		
+		
+		// 해밀토니안 경로.. 안되네..ㅎㅎ		
+		int n2 = 5; //6;
+		int[][] e2 = {
+			// {5,1},{2,5},{3,5},{3,6},{2,4},{4,0}
+				{2,5},{2,0},{3,2},{4,2},{2,1}
+		};
+		minDistance = caller.dijkstra(n2, e2, 6, 200001);
+		System.out.println("### Test Result .. ###");
+		System.out.println("expact : [ ]" + " ==> result : " + Arrays.toString(minDistance));
+		
+
+		
+		
 	}
 
 }

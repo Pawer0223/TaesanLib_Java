@@ -27,6 +27,14 @@ public class PowerSetTest {
 		List<List<String>> powerSet3 = caller.powerSet(arr3, isDesc);
 		print.twoList(powerSet3);
 		
+		String[] numbers = {
+				// "1", "7"
+				// "0", "1", "2", "3", "4","5","6",
+				"0", "1", "1"
+		};
+		
+		List<List<String>> permutation4 = caller.powerSet(numbers, isDesc);
+		print.twoList(permutation4);
 	}
 
 }

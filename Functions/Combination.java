@@ -12,7 +12,7 @@ public class Combination<T> {
 	
 	/*
 	 * result: 결과
-	 * perResult : 완성 된 수열의 index정보를 기록하는 배열
+	 * perResult : 완성 된 수열의 index정보를 기록하는 배열 , 각각의 조합이 된다 !
 	 * visitPosition : 현재 방문한 위치들을 기록하게되는 배열
 	 */
 	private List<List<T>> result = new ArrayList<>();

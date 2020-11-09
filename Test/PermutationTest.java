@@ -30,6 +30,14 @@ public class PermutationTest {
 		List<List<String>> permutation3 = caller.permutation(arr3, n3);
 		print.twoList(permutation3);
 		
+		String[] numbers = {
+				// "1", "7"
+				"0", "1", "2","3","4","5","6"
+		};
+		
+		List<List<String>> permutation4 = caller.permutation(numbers, 7);
+		print.twoList(permutation4);
+		
 	}
 
 }
