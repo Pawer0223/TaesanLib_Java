@@ -5,6 +5,7 @@ import java.util.List;
 import Functions.Combination;
 import Functions.Permutation;
 import Functions.PowerSet;
+import Functions.TwoPointer;
 import Functions.Graph.Dijkstra;
 import Functions.Graph.FloydWarshall;
 import Functions.Graph.Kruskal;
@@ -36,6 +37,11 @@ public class Caller {
 	public int kruskal(int n, int[][] edges) {
 		Kruskal krus = new Kruskal();
 		return krus.start(n, edges); 
+	}
+	
+	public int twoPointer(int size, int findNum, int[] nums) {
+		TwoPointer twoPointer = new TwoPointer();
+		return twoPointer.start(size, findNum, nums);
 	}
 	
 	public int[][] floydWarshall(int n, int[][] arr, int inf) {
