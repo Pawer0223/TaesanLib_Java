@@ -2,6 +2,7 @@ package Functions.Commons;
 
 import java.util.List;
 
+import Functions.BinarySearch;
 import Functions.Combination;
 import Functions.Permutation;
 import Functions.PowerSet;
@@ -42,6 +43,11 @@ public class Caller {
 	public int twoPointer(int size, int findNum, int[] nums) {
 		TwoPointer twoPointer = new TwoPointer();
 		return twoPointer.start(size, findNum, nums);
+	}
+	
+	public boolean binarySearch(int[] nums, int findNum) {
+		BinarySearch bs = new BinarySearch();
+		return bs.start(nums, findNum);
 	}
 	
 	public int[][] floydWarshall(int n, int[][] arr, int inf) {
