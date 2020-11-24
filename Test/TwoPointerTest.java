@@ -28,8 +28,11 @@ public class TwoPointerTest {
 		int r2 = caller.twoPointer(size, findNum, nums2);
 		System.out.println("수열 => " + Arrays.toString(nums2)+"의 구간 합이 " + findNum +"가 되는 경우의 수는 [" + r2 +"] 개 입니다.");
 		
-		
-		
+		int[] nums3 = {2, 3, 5, 7, 11, 13};
+		size = 6;
+		findNum = 13;
+		int r3 = caller.twoPointer(size, findNum, nums3);
+		System.out.println("수열 => " + Arrays.toString(nums3)+"의 구간 합이 " + findNum +"가 되는 경우의 수는 [" + r3 +"] 개 입니다.");
 
 	}
 

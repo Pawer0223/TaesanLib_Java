@@ -27,12 +27,11 @@ public class TwoPointer {
 		int result = 0;
 
 		// pointer2즉, right위치의 포인터가 끝에 도달할때까지 반복.
-		while (r != size) {
-
+		while (true) {
 			if (areaSum >= findNum) { // 구간 합이 크거나 같은 경우에는 pointer1, 즉 left 위치의 값을 빼고 left를 이동시킨다.
 				areaSum -= nums[l++];
 			} 
-			else if (r == size) // 마지막 s == M 조건을 한번더 보기 위해 종료조건을 여기다 포함시킨다. ex) 6 13에 2 3 5 7 11 13일 때 마지막 13도 볼 수 있도록
+			else if (r == size) // 마지막 s == M 조건을 한번더 보기 위해 종료조건을 여기다 포함시킨다. 왜냐면 위 if에서 걸려서 아래 if를 한번 더 타니 깐 ! (Test r3의 경우)
 				break;
 			else 
 				areaSum += nums[r++]; // 구간합보다 작은경우에는 그 합을 늘려간다.

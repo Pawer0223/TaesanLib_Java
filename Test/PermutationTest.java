@@ -1,6 +1,8 @@
 package Test;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import Functions.Commons.Caller;
 import Functions.Commons.PrintData;
@@ -9,9 +11,8 @@ public class PermutationTest {
 	
 	static Caller caller = new Caller();
 	static PrintData print = new PrintData();
-
-	public static void main(String[] args) {
-		
+	
+	private static void sampleTest() {
 		Integer[] arr1 = {1, 2, 3, 4};
 		int n = 3;
 
@@ -38,6 +39,15 @@ public class PermutationTest {
 		List<List<String>> permutation4 = caller.permutation(numbers, 7);
 		print.twoList(permutation4);
 		
+	}
+
+	public static void main(String[] args) {
+		// sampleTest();
+		
+		String[] arr = {"m1" , "m2" , "w1" , "w2"};
+		int n = 3;
+		List<List<String>> permutation = caller.permutation(arr, n);
+		print.twoList(permutation);
 	}
 
 }
