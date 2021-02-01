@@ -1,0 +1,47 @@
+라벨정보
+image: 
+{
+  "id": 1,
+  "width": 1600,
+  "height": 1200,
+  "file_name": "KakaoTalk_20210130_214332075_02.jpg",
+  "date_captured": "20210131"
+}
+ 
+annotations: 
+[
+  {
+    "id": 1,
+    "image_id": 1,
+    "text": "아빠참치",
+    "bbox": [
+      4,
+      553,
+      813,
+      555
+    ]
+  },
+  {
+    "id": 2,
+    "image_id": 1,
+    "text": "xxx",
+    "bbox": [
+      846,
+      486,
+      754,
+      223
+    ]
+  },
+  {
+    "id": 3,
+    "image_id": 1,
+    "text": "xxx",
+    "bbox": [
+      0,
+      1073,
+      924,
+      127
+    ]
+  }
+]
+메타데이터
