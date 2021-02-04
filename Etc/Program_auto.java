@@ -18,7 +18,7 @@ import org.json.simple.parser.JSONParser;
  */
 public class Program_auto {
 
-	static String Path = "src/Etc/";
+	static String Path = "./Etc/";
 	static String FileNm = "test.txt";
 	static Map<Long, String> validBox = new TreeMap<>();
 	static Map<Long, String> dontcare = new TreeMap<>();
